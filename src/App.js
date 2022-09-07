@@ -6,7 +6,6 @@ import Navbar from './Components/Navbar';
 
 function App() {
   const [title,setTitle] = useState("blog")
-  const likes = 50
 
 
   return (
