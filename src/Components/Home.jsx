@@ -8,18 +8,26 @@ const Home = () => {
     { title: 'Welcome party!', body: 'lorem ipsum...', author: 'yoshi', id: 2 },
     { title: 'Web dev top tips', body: 'lorem ipsum...', author: 'mario', id: 3 }
     ])
+    
+    const [nickName, setNickname] = useState("Iori")
    
-    useEffect(() => {
-        console.log('useEffect ran ');
-        console.log(blogs );
-    })
+
     const handleDelete = (id) => {
         const newBlogs = blogs.filter((blog) => blog.id !== id)
         setBlogs(newBlogs)
     }
+    
+    useEffect(() => {
+        console.log('useEffect ran ');
+        console.log(nickName);
+    },[nickName])
+
+
 
     return ( 
         <div className="Home">
+        <p> {nickName} </p>
+        <button onClick={() => setNickname('Yagami')}>change NickName</button>
             
        <BlogList blogs = { blogs } title = "All Blogs" handleDelete = {handleDelete}    />
        <BlogList blogs = { blogs.filter((blog)=>blog.author==="yoshi" ) } title = "Yagami's  Blogs"/>
