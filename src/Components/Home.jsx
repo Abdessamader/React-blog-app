@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
+import useFetch from "../Hooks/UseFetch";
 import BlogList from "./BlogList";
+
 
 const Home = () => {
  
@@ -8,7 +10,7 @@ const Home = () => {
   //     setBlogs(newBlogs);
   //   };
 
-  
+  const { data: blogs,isPending,error} = useFetch('http://localhost:8000/blogs')
 
   return (
     <div className="home">
