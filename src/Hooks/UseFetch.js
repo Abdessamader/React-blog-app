@@ -27,7 +27,7 @@ const useFetch = () => {
         }, 1000);
       }, []);
       
-      return 
+      return  
 }
 
 export default useFetch;
