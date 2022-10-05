@@ -2,7 +2,9 @@ import React from 'react'
 
 function Create() {
   return (
-    <div>Create</div>
+    <div className='create'>
+      <h2>Add a New Blog!</h2>
+    </div>
   )
 }
 
