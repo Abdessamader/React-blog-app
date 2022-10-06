@@ -1,13 +1,13 @@
 import React from "react";
 import { useState } from "react";
-import {useHistory} from 'react-router-dom'
+import {useNavigate} from 'react-router-dom'
 
 function Create() {
   const [title, setTitle] = useState('')
   const [body, setBody] = useState('')
   const [author, setAuthor] = useState('Mario')
   const [isPending, setIsPending] = useState(false)
-  const history = useHistory();
+  const navigate = useNavigate();
 
 
 
@@ -23,7 +23,7 @@ function Create() {
         console.log('new blog added');
         setIsPending(false)
         // history.go(-1)
-        history.push('/')
+        navigate('/')
       })
   }
   
